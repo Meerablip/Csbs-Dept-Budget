@@ -75,46 +75,6 @@ This application provides:
 
 ---
 
-## Database Schema
-
-### Users
-- id
-- name
-- email
-- password (hashed)
-- role
-
-### Categories
-- id
-- name
-
-### Budgets
-- id
-- user_id
-- category_id
-- year
-- planned_amount
-- allotted_amount
-
-### Expenses
-- id
-- user_id
-- budget_id
-- category_id
-- parent_expense_id (hierarchy)
-- amount
-- date
-- description
-- vendor
-- approved
-
-### Receipts
-- id
-- expense_id
-- file_url
-
----
-
 ## Permissions Matrix
 
 | Action | Admin | HOD | Staff |
@@ -130,4 +90,51 @@ This application provides:
 ---
 
 ## Project Structure (Backend)
+server/
+├── src/
+│ ├── controllers/
+│ ├── routes/
+│ ├── middleware/
+│ ├── models/
+│ ├── validations/
+│ ├── lib/
+│ └── server.js
+├── prisma / sql scripts
+├── .env
+└── package.json
+---
 
+## Setup Instructions
+
+### 1. Clone Repository
+git clone <repo-url>
+cd server
+
+
+### 2. Install Dependencies
+
+### 3. Environment Variables
+Create `.env`:
+
+---
+
+## Status
+
+Backend: **Completed & Production-Ready**  
+Frontend: **In Progress**
+
+---
+
+## Use Cases
+
+- Department budget planning
+- Expense approvals
+- Audit and accreditation (NBA / NAAC)
+- Financial transparency
+- Administrative reporting
+
+---
+
+## License
+
+Academic / Educational Use
